@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/phillipjhl/To-Do-List-App/issues"
   },
-  "homepage": "https://github.com/phillipjhl/To-Do-List-App#readme"
+  "homepage": "https://github.com/phillipjhl/To-Do-List-App#readme",
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-router-dom": "^4.3.1"
+  }
 }
