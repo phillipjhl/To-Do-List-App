@@ -6,3 +6,8 @@ import routes from './routes';
 
 //Create express server
 let app = express();
+
+//Express middleware: must come before routes
+
+//color-coding of HTTP requests to indentify status codes 
+app.use(morgan('dev'));
