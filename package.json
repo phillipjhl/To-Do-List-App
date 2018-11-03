@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/phillipjhl/To-Do-List-App#readme",
   "dependencies": {
+    "@babel/cli": "^7.1.2",
     "express": "^4.16.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
