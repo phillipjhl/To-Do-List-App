@@ -15,7 +15,7 @@ ChipRewards test to-do-list application.
 - Topics: Assigned tags for each task at creation, able to sort and display through different tags
 - Options: Single "options" icon to click to display edit button, delete button, and change topic button
 - Hover: When task is hovered on, show left-border marker
-- Each task will be class-based component, giving it the ability to edit and re-render independtly
+- Each task will be class-based component, giving it the ability to edit and re-render independently
 
 ### Requests
 - Get: Request JSON data of tasks from server/database, map over list to create each unique task component
