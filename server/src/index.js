@@ -21,3 +21,11 @@ app.use(express.json());
 app.use('/api', routes);
 
 //stateRouting middleware to determine whether route conatins a server asset or not
+
+//make node listen for request on given port
+//if production- run on that given port by the node environment
+//if dev- run on port 3000
+let port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+});
