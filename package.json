@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build:client": "webpack",
-    "build:server": "babel ./server/src -d ./server/lib"
+    "build:server": "babel ./server/src -d ./server/lib",
+    "clean": "npm run clean:client && npm run clean:server",
+    "clean:client": "rimraf ./client/dist",
+    "clean:server": "rimraf ./server/lib" 
   },
   "repository": {
     "type": "git",
