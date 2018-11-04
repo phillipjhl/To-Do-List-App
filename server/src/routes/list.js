@@ -17,6 +17,7 @@ let list = [
 
 let router = Router();
 
+//route works
 router.get('/', (req, res) => {
     res.json(list);
 });
