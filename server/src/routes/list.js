@@ -15,3 +15,10 @@ let list = [
     }
 ];
 
+let router = Router();
+
+router.get('/', (req, res) => {
+    res.json(list);
+});
+
+export default router;
