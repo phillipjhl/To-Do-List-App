@@ -10,7 +10,9 @@
     "clean:client": "rimraf ./client/dist",
     "clean:server": "rimraf ./server/lib" ,
     "dev": "npm run clean && npm build:server && concurrently -r -k \"npm run watch:client\" \"npm run watch:server\" \"nodemon --watch server/lib --delay 1\"",
-
+    "start:server": "node server/lib/index.js",
+    "watch:client": "webpack --mode development --watch",
+    "watch:server": "babel ./server/src -w -d ./server/lib"
   },
   "repository": {
     "type": "git",
