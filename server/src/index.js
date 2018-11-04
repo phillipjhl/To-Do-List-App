@@ -19,3 +19,5 @@ app.use(express.static(CLIENT_PATH));
 app.use(express.json());
 //api route that recieves all requests
 app.use('/api', routes);
+
+//stateRouting middleware to determine whether route conatins a server asset or not
