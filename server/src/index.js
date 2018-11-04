@@ -4,7 +4,7 @@ import express from 'express';
 import morgan from 'morgan';
 import routes from './routes';
 
-const CLIENT_PATH = join(_dirname, '../../client');
+const CLIENT_PATH = join(__dirname, '../../client');
 
 //Create express server
 let app = express();
