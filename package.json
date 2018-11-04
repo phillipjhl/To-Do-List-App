@@ -8,7 +8,9 @@
     "build:server": "babel ./server/src -d ./server/lib",
     "clean": "npm run clean:client && npm run clean:server",
     "clean:client": "rimraf ./client/dist",
-    "clean:server": "rimraf ./server/lib" 
+    "clean:server": "rimraf ./server/lib" ,
+    "dev": "npm run clean && npm build:server && concurrently -r -k \"npm run watch:client\" \"npm run watch:server\" \"nodemon --watch server/lib --delay 1\"",
+
   },
   "repository": {
     "type": "git",
