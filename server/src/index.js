@@ -15,3 +15,5 @@ let app = express();
 app.use(morgan('dev'));
 //statically serve up all client files from given path
 app.use(express.static(CLIENT_PATH));
+//json parser- must be before the routes
+app.use('/api', routes);
