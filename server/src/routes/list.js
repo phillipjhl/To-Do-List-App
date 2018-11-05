@@ -23,9 +23,9 @@ router.get('/:id?', (req, res, next) => {
     if (id) {
         listStore.getTask(id)
         .then(task => {
-            res.json(task)
-            .catch(next);
+            res.json(task);
         })
+        .catch(next);
     } else {
         listStore.getList()
             .then(list => {
