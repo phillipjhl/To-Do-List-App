@@ -1,5 +1,5 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const CLIENT_DEST = path.join(__dirname, './client/dist');
 
@@ -8,18 +8,6 @@ module.exports = {
     entry: ['@babel/polyfill', './client/src/index.js'],
     //output directory of new bundle.js file
     output: { path: CLIENT_DEST, filename: 'bundle.js' },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                styles: {
-                    name: 'styles',
-                    test: /\.css$/,
-                    chunks: 'all',
-                    enforce: true
-                }
-            }
-        }
-    },
     module: {
         rules: [
             {
@@ -33,7 +21,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.(png|jpg|gif)$/,
+                test: /\.(png|jpg|svg|gif)$/,
                 use: {
                     loader: 'file-loader',
                     options: {
@@ -43,10 +31,10 @@ module.exports = {
                 },
             },
             {
-                test: /\.(scss|css)$/,
-                use: [MiniCssExtractPlugin.loader,
-                    'css-loader!sass-loader'
-                ]
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    
+                })
             }
         ],
     },
