@@ -31,4 +31,13 @@ ChipRewards test to-do-list application.
 - Map-Api: add location to each tasks, click to show location on map
 - Priority: Add priority markers to each task, sort list by higher priority markers
 
+#Running App
 
+1) npm install
+- will install all dependencies
+
+2) npm run dev 
+- for developmet server watching client files
+
+3) npm run start
+- for production environment
