@@ -45,5 +45,6 @@ let writeList = async () => {
 //export
 export default {
     getList,
-    createTask
+    createTask,
+    getTask
 }
