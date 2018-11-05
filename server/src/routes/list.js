@@ -18,22 +18,23 @@ import listStore from '../liststore';
 
 let router = Router();
 
-//route works
-router.get('/', (req, res, next) => {
+router.get('/:id?', (req, res, next) => {
+    
     listStore.getList()
     .then(list => {
         res.json(list);
     })
-    //catch error and pass it to next middleware, reduces crashes
+    //catch error and pass it to next middleware, reduces uncaught exceptions
     .catch(next);
 });
 
+//post request for '/api/list
 router.post('/', (req, res, next) => {
     listStore.createTask(req.body)
     .then(success => {
         res.sendStatus(201);
     })
-    //catch error and pass it to next middleware, reduces crashes
+    //catch error and pass it to next middleware, reduces uncaught exceptions
     .catch(next);
 })
 
