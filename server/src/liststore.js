@@ -36,6 +36,10 @@ let createTask = async (task) => {
 //put function
 
 //delete function
+let deleteTask = async (id) => {
+    delete toDoList[id];
+    await writeList();
+}
 
 //write to file- helper function
 let writeList = async () => {
