@@ -33,7 +33,12 @@ let createTask = async (task) => {
     await writeList();
 }
 
-//put function
+//update function
+let updateTask = async (id, task) => {
+    // indexes requested task, replaces it with new task
+    toDoList[id] = task;
+    await writeList();
+}
 
 //delete function
 let deleteTask = async (id) => {
@@ -51,5 +56,6 @@ export default {
     getList,
     createTask,
     getTask,
-    deleteTask
+    deleteTask,
+    updateTask
 }
