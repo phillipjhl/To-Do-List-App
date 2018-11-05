@@ -24,6 +24,7 @@ router.get('/', (req, res, next) => {
     .then(list => {
         res.json(list);
     })
+    //catch error and pass it to next middleware, reduces crashes
     .catch(next);
 });
 
@@ -32,6 +33,7 @@ router.post('/', (req, res, next) => {
     .then(success => {
         res.sendStatus(201);
     })
+    //catch error and pass it to next middleware, reduces crashes
     .catch(next);
 })
 
