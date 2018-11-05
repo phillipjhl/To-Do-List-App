@@ -19,7 +19,11 @@ let router = Router();
 
 //route works
 router.get('/', (req, res) => {
-    res.json(list);
+    try {
+        res.json(list);
+    } catch (e) {
+        res.sendStatus(404);
+    }
 });
 
 export default router;
