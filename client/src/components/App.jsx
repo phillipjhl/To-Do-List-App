@@ -7,7 +7,9 @@ class Navigation extends Component {
         return (
             <Router>
                 <Fragment>
-                    
+                    <Switch>
+                        <Route exact path="/" component={HomePage} />
+                    </Switch>
                 </Fragment>
             </Router>
         );
