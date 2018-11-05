@@ -19,7 +19,7 @@ import listStore from '../liststore';
 let router = Router();
 
 router.get('/:id?', (req, res, next) => {
-    
+    let id = req.params.id;
     listStore.getList()
     .then(list => {
         res.json(list);
