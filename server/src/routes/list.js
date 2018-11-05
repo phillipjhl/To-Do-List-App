@@ -50,6 +50,12 @@ router.post('/', (req, res, next) => {
 //put request to 'api/list/:id'
 router.put('/:id', (req, res, next) => {
     let id = req.params.id;
+    let task = req.body;
+    listStore.updateTask(id, task)
+    .then(success => {
+        res.sendStatus(200);
+    })
+    .catch(next);
 });
 
 //delete request for 'api/list/:id
