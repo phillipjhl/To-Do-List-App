@@ -4,18 +4,6 @@
 import { Router } from 'express';
 import listStore from '../liststore';
 
-//test data
-// let list = [
-//     {
-//         id: 1,
-//         task: "go to store"
-//     },
-//     {
-//         id: 2,
-//         task: "do dishes"
-//     }
-// ];
-
 let router = Router();
 
 //get request for 'api/list/:id?
