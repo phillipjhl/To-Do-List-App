@@ -4,7 +4,7 @@ class Navigation extends Component {
 
     render() {
         return (
-            <div>
+            <div className="text-primary">
                 hello there
             </div>
         );
