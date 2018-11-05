@@ -18,6 +18,13 @@ let getList = async () => {
     return copy;
 };
 
+//async get one func
+//returns one task
+let getTask = async (id) => {
+    let copy = await Object.assign({}, toDoList[id]);
+    return copy;
+}
+
 //post function
 
 //will create a task item and increments id
