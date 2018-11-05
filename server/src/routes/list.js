@@ -18,6 +18,7 @@ import listStore from '../liststore';
 
 let router = Router();
 
+//get request for 'api/list/:id?
 router.get('/:id?', (req, res, next) => {
     let id = req.params.id;
     if (id) {
@@ -44,6 +45,16 @@ router.post('/', (req, res, next) => {
         })
         //catch error and pass it to next middleware, reduces uncaught exceptions
         .catch(next);
-})
+});
+
+//delete request for 'api/list/:id
+router.delete('/:id', (req, res, next) => {
+    let id = req.params.id;
+    listStore.deleteTask(id)
+    .then(success => {
+        res.sendStatus(200);
+    })
+    .catch(next);
+});
 
 export default router;
