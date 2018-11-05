@@ -11,7 +11,15 @@
      toDoLst = JSON.parse(fs.readFile('toDoList.json'));
  }
 
- 
+
+//get all function
+
+//post function
+//will create a task item and increments id
+let createTask = async (task) => {
+    toDoList[toDoList.nextid++] = task;
+    await writeList();
+}
 
  //put function
 
