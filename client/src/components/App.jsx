@@ -5,7 +5,9 @@ class Navigation extends Component {
 
     render() {
         return (
-            
+            <Router>
+                
+            </Router>
         );
     }
 }
