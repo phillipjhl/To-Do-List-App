@@ -5,7 +5,7 @@ export default class HomePage extends Component {
 
     render() {
         return (
-            <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column mt-auto mb-auto text-center">
                 <main role="main" class="inner cover">
                     <h1 class="cover-heading">Welcome to Your New Way of Doing!</h1>
                     <p class="lead">Create Tasks and Get Them Them Done</p>
