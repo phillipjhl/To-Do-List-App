@@ -33,7 +33,8 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    
+                    fallback: "style-loader",
+                    use: "css-loader!sass-loader",
                 })
             }
         ],
@@ -42,7 +43,7 @@ module.exports = {
         extensions: ['.js', '.jsx'],
     },
     plugins: [
-        new MiniCssExtractPlugin({
+        new ExtractTextPlugin({
             filename: "styles.css",
         })
     ]
