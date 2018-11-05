@@ -49,6 +49,7 @@ router.post('/', (req, res, next) => {
 
 //put request to 'api/list/:id'
 router.put('/:id', (req, res, next) => {
+    let id = req.params.id;
 });
 
 //delete request for 'api/list/:id
