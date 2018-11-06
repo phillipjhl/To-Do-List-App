@@ -10,7 +10,7 @@ export default class ListPage extends Component {
 
         this.state = {
             isLoading: true,
-            list: []
+            toDolist: []
         }
 
         //method binding for calling and performance
@@ -34,7 +34,10 @@ export default class ListPage extends Component {
                         }
                         listData.push(data);
                     }
-                    console.log(listData);
+                    this.setState({
+                        toDolist: listData
+                    });
+                    console.log(this.state);
                 })
                 .catch(err => console.log(err));
             // When done, change isLoading to false
