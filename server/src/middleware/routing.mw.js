@@ -22,8 +22,9 @@ function isServerAsset(path) {
     if (path.indexof('/api') !== -1 || path.indexof('/?') !== -1) {
 
     } else if {
-
-    } else {
         
+    } else {
+        // If not a server asset but should be handled by client
+        return false;
     }
 }
