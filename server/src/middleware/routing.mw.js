@@ -16,4 +16,6 @@ function isServerAsset(path) {
     if (pieces.length === 0) {
         return false;
     }
+    //get last param of url
+    let last = pieces[pieces.length - 1];
 }
