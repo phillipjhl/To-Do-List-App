@@ -29,3 +29,5 @@ function isServerAsset(path) {
         return false;
     }
 }
+
+export default stateRouting;
