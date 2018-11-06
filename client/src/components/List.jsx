@@ -11,6 +11,16 @@ export default class ListPage extends Component {
             isLoading: true,
             list: []
         }
+
+        componentDidMount() {
+            // Call api
+            // When done, change isLoading to false
+        }
+
+        createList() {
+            //create list of Tasks
+        }
+
     }
 
 
