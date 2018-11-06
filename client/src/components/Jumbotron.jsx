@@ -3,9 +3,7 @@
 import React from 'react';
 
 function Jumbotron(props) {
-    
-    //setting date
-    
+
     return (
         <div className="jumbotron jumbotron-fluid bg-dark text-white">
             
@@ -13,7 +11,9 @@ function Jumbotron(props) {
                     <h1 className="display-5">Your<br />Tasks</h1>                 
                 </div>
 
-                {/* time stamp */}
+                <p>
+                    {fullDate}
+                </p>
         </div>
     );
 }
