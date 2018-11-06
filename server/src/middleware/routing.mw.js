@@ -18,11 +18,12 @@ function isServerAsset(path) {
     }
     // Get last param of url
     let last = pieces[pieces.length - 1];
-    // If /api or /? was found
-    if (path.indexof('/api') !== -1 || path.indexof('/?') !== -1) {
-
-    } else if {
-        
+    if (path.indexOf('/api') !== -1 || path.indexOf('/?') !== -1) {
+        // If /api or /? was found
+        return true;
+    } else if(last.indexOf('.') !== -1) {
+        // If '.' was found
+        return true; // It must be a file extension
     } else {
         // If not a server asset but should be handled by client
         return false;
