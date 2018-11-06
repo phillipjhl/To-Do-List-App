@@ -4,7 +4,7 @@
 import React, { Component, Fragment } from 'react';
 
 export default class ListPage extends Component {
-    contructor(props) {
+    constructor(props) {
         super(props);
     }
 
