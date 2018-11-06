@@ -12,6 +12,9 @@ export default class ListPage extends Component {
             list: []
         }
 
+        this.createList = this.createList.bind(this);
+    }
+
         componentDidMount() {
             // Call api
             // When done, change isLoading to false
@@ -21,7 +24,7 @@ export default class ListPage extends Component {
             //create list of Tasks
         }
 
-    }
+    
 
 
     render() {
