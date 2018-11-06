@@ -4,7 +4,7 @@ export default class ListPage extends Component {
 
     render() {
         return (
-            <h1>List Page</h1>
+            <h1 className="text-primary">List Page</h1>
         );
     }
 
