@@ -18,7 +18,12 @@ export default class ListPage extends Component {
     }
 
         componentDidMount() {
-            $.ajax
+            fetch('/api/list')
+                .then(res => res.json())
+                .then(tasks => {
+                    console.log(tasks)
+                })
+                .catch(err => console.log(err));
             // Call api
             // When done, change isLoading to false
         }
