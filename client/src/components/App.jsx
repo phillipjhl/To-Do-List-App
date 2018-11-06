@@ -11,8 +11,8 @@ class Navigation extends Component {
         return (
             <Router>
                 <Fragment>
+                    <NavBar />
                     <Switch>
-                        <NavBar />
                         <Route exact path="/" component={HomePage} />
                         <Route path="/list" component={ListPage} />
                     </Switch>
