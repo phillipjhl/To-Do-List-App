@@ -11,7 +11,7 @@ function Jumbotron(props) {
     return (
         <div className="jumbotron jumbotron-fluid bg-dark text-white">
             
-                <div className="col-sm-4">
+                <div className="col-sm-4 pt-2">
                     <h1 className="display-5">Your<br />Tasks</h1>                 
                 </div>
 
