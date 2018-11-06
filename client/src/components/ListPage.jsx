@@ -7,7 +7,7 @@ import Jumbotron from './Jumbotron';
 import List from './List';
 
 export default class ListPage extends Component {
-    contructor(props) {
+    constructor(props) {
         super(props);
     }
 
