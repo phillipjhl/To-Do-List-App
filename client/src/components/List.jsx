@@ -22,10 +22,19 @@ export default class ListPage extends Component {
             fetch('/api/list')
                 .then(res => res.json())
                 .then(list => {
-                    console.log(list.nextid);
+                    let listData = [];
                     for (let i = 0; i < list.nextid; i++) {
-                        console.log(list[i]);
+                        let task = list[i];
+                        let data = {
+                            id: i,
+                            text: task.text,
+                            topic: task.topic,
+                            time: task.time,
+                            location: task.location
+                        }
+                        listData.push(data);
                     }
+                    console.log(listData);
                 })
                 .catch(err => console.log(err));
             // When done, change isLoading to false
