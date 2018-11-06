@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function NavBar(props) {
     return (
-        <nav className="navbar navbar-expand-lg fixed-top navbar-light">
+        <nav className="navbar fixed-top navbar-light">
             <Link to="/list" className="navbar-brand">Home</Link>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,8 +11,8 @@ function NavBar(props) {
             </button>
 
             <div className="collapse navbar-collapse" id="navbar">
-                <div className="navbar-nav">
-                    <Link to="/list" className="nav-item nav-link">List <span className="sr-only">(current)</span></Link>
+                <div className="navbar-nav flex-row-reverse">
+                    <Link to="/list" className="nav-item nav-link display-4">List <span className="sr-only">(current)</span></Link>
                 </div>
             </div>
 
