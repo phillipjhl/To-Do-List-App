@@ -4,6 +4,8 @@
 import React, { Component, Fragment } from 'react';
 import 'isomorphic-fetch';
 
+import Task from './Task';
+
 export default class ListPage extends Component {
     constructor(props) {
         super(props);
@@ -17,42 +19,41 @@ export default class ListPage extends Component {
         this.createList = this.createList.bind(this);
     }
 
-        componentDidMount() {
-            // Call api
-            fetch('/api/list')
-                .then(res => res.json())
-                .then(list => {
-                    let listData = [];
-                    for (let i = 0; i < list.nextid; i++) {
-                        let task = list[i];
-                        let data = {
-                            id: i,
-                            text: task.text,
-                            topic: task.topic,
-                            time: task.time,
-                            location: task.location
-                        }
-                        listData.unshift(data);
+    componentDidMount() {
+        // Call api
+        fetch('/api/list')
+            .then(res => res.json())
+            .then(list => {
+                let listData = [];
+                for (let i = 0; i < list.nextid; i++) {
+                    let task = list[i];
+                    let data = {
+                        id: i,
+                        text: task.text,
+                        topic: task.topic,
+                        time: task.time,
+                        location: task.location
                     }
-                    this.setState({
-                        toDolist: listData,
-                        isLoading: false
-                    });
-                })
-                .catch(err => console.log(err));
-            // When done, change isLoading to false
-        }
-
-        createList() {
-            //create list of Tasks
-            let taskList = this.state.toDolist.map((task) => {
-                    console.log(task)
-                    return;
+                    listData.unshift(data);
+                }
+                this.setState({
+                    toDolist: listData,
+                    isLoading: false
                 });
-            // return taskList;
-        }
+            })
+            .catch(err => console.log(err));
+        // When done, change isLoading to false
+    }
 
-    
+    createList() {
+        //create list of Tasks
+        let taskList = this.state.toDolist.map((task) => {
+            return <Task key={task.id} data={task} />
+        });
+        return taskList;
+    }
+
+
 
 
     render() {

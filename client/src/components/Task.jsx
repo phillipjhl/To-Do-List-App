@@ -11,7 +11,7 @@ class Task extends Component {
 
     render() {
         return (
-            <h1>Text {this.props.id}: {this.props.text}</h1>
+            <h1>Text {this.props.data.id}: {this.props.data.text}</h1>
         );
     }
 }
