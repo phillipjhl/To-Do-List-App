@@ -3,6 +3,7 @@ import { join } from 'path';
 import express from 'express';
 import morgan from 'morgan';
 import routes from './routes';
+import stateRouting from './middleware/routing.mw.js';
 
 const CLIENT_PATH = join(__dirname, '../../client');
 
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use('/api', routes);
 
 //stateRouting middleware to determine whether route conatins a server asset or not
+app.use(stateRouting);
 
 //make node listen for request on given port
 //if production- run on that given port by the node environment
