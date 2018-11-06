@@ -59,7 +59,10 @@ export default class ListPage extends Component {
     render() {
         return (
             <Fragment>
-                {this.createList()}
+                <aside className="col-md-8">
+                    <h2 className="col-sm-9 text-primary">To Do</h2>
+                    {this.createList()}
+                </aside>
             </Fragment>
         );
     }
