@@ -3,14 +3,17 @@
 import React from 'react';
 
 function Jumbotron(props) {
+    
+    //setting date
+    
     return (
         <div className="jumbotron jumbotron-fluid bg-dark text-white">
-            <div className="container">
-                <div className="col-sm-4 inner-cover">
-                    <h6>YOUR</h6>
-                    <h6>TASKS</h6>                   
+            
+                <div className="col-sm-4">
+                    <h1 className="display-5">Your<br />Tasks</h1>                 
                 </div>
-            </div>
+
+                {/* time stamp */}
         </div>
     );
 }
