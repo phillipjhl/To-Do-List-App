@@ -1,9 +1,9 @@
 import React from 'react';
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export default function NavBar(props) {
+function NavBar(props) {
     return (
-        <nav class="navbar fixed-top navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
             
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -11,10 +11,12 @@ export default function NavBar(props) {
             
             <div className="collapse navbar-collapse" id="navbar">
                 <div className="navbar-nav flex-row">
-                <Link to="/list" class="navbar-brand">Home</Link>
+                <Link to="/list" className="navbar-brand">Home</Link>
                 </div>
             </div>
 
         </nav>
     );
 }
+
+export default NavBar;
