@@ -2,7 +2,11 @@
 
 import React from 'react';
 
+import getDate from '../utils/date';
+
 function Jumbotron(props) {
+
+    let date = getDate();
 
     return (
         <div className="jumbotron jumbotron-fluid bg-dark text-white">
@@ -11,8 +15,8 @@ function Jumbotron(props) {
                     <h1 className="display-5">Your<br />Tasks</h1>                 
                 </div>
 
-                <p>
-                    {fullDate}
+                <p className="col-sm-4">
+                    {date}
                 </p>
         </div>
     );
