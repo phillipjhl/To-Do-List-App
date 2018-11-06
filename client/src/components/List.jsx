@@ -2,6 +2,7 @@
 // Will call api for data, map over data, create list of Task components
 
 import React, { Component, Fragment } from 'react';
+import 'isomorphic-fetch';
 
 export default class ListPage extends Component {
     constructor(props) {
@@ -12,10 +13,12 @@ export default class ListPage extends Component {
             list: []
         }
 
+        //method binding for calling and performance
         this.createList = this.createList.bind(this);
     }
 
         componentDidMount() {
+            $.ajax
             // Call api
             // When done, change isLoading to false
         }
