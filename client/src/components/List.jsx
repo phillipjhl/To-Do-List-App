@@ -20,8 +20,11 @@ export default class ListPage extends Component {
         componentDidMount() {
             fetch('/api/list')
                 .then(res => res.json())
-                .then(tasks => {
-                    console.log(tasks)
+                .then(list => {
+                    let ToDoList = [list];
+                    ToDoList.forEach(task => {
+                        console.log(task);
+                    });
                 })
                 .catch(err => console.log(err));
             // Call api
