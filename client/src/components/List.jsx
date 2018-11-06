@@ -18,16 +18,16 @@ export default class ListPage extends Component {
     }
 
         componentDidMount() {
+            // Call api
             fetch('/api/list')
                 .then(res => res.json())
                 .then(list => {
-                    let ToDoList = [list];
-                    ToDoList.forEach(task => {
-                        console.log(task);
-                    });
+                    console.log(list.nextid);
+                    for (let i = 0; i < list.nextid; i++) {
+                        console.log(list[i]);
+                    }
                 })
                 .catch(err => console.log(err));
-            // Call api
             // When done, change isLoading to false
         }
 
