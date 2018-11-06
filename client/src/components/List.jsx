@@ -32,12 +32,12 @@ export default class ListPage extends Component {
                             time: task.time,
                             location: task.location
                         }
-                        listData.push(data);
+                        listData.unshift(data);
                     }
                     this.setState({
-                        toDolist: listData
+                        toDolist: listData,
+                        isLoading: false
                     });
-                    console.log(this.state);
                 })
                 .catch(err => console.log(err));
             // When done, change isLoading to false
@@ -45,6 +45,11 @@ export default class ListPage extends Component {
 
         createList() {
             //create list of Tasks
+            let taskList = this.state.toDolist.map((task) => {
+                    console.log(task)
+                    return;
+                });
+            // return taskList;
         }
 
     
@@ -52,7 +57,9 @@ export default class ListPage extends Component {
 
     render() {
         return (
-            <h1 className="text-primary col-sm-9">To Do</h1>
+            <Fragment>
+                {this.createList()}
+            </Fragment>
         );
     }
 
