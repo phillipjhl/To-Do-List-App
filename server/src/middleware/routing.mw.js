@@ -8,3 +8,12 @@ function stateRouting(req, res, next) {
         res.sendFile(join(__dirname, '../../../client/index.html'));
     }
 }
+
+function isServerAsset(path) {
+    //spliting url 
+    let pieces = path.split('/');
+    //if just '/' send file
+    if (pieces.length === 0) {
+        return false;
+    }
+}
