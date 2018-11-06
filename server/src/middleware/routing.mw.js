@@ -10,12 +10,20 @@ function stateRouting(req, res, next) {
 }
 
 function isServerAsset(path) {
-    //spliting url 
+    // Spliting url 
     let pieces = path.split('/');
-    //if just '/' send file
+    // If just '/' send file
     if (pieces.length === 0) {
         return false;
     }
-    //get last param of url
+    // Get last param of url
     let last = pieces[pieces.length - 1];
+    // If /api or /? was found
+    if (path.indexof('/api') !== -1 || path.indexof('/?') !== -1) {
+
+    } else if {
+
+    } else {
+        
+    }
 }
