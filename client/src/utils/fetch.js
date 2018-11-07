@@ -17,4 +17,6 @@ function json(url, method = 'GET', payload = {}) {
     if (method === 'GET') {
         delete data.body;
     }
+
+    return makeFetch(url, data)
 }
