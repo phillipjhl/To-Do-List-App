@@ -22,31 +22,27 @@ export default class ListPage extends Component {
 
     componentDidMount() {
         // Call api
-        Fetch.get('./api/list')
-        .then(res => {
-            console.log(res);
+        Fetch.get('/api/list')
+        .then(res => res.json())
+        .then(list => {
+            let listData = [];
+            for (let i = 0; i < list.nextid; i++) {
+                let task = list[i];
+                let data = {
+                    id: i,
+                    text: task.text,
+                    topic: task.topic,
+                    time: task.time,
+                    location: task.location
+                }
+                listData.unshift(data);
+            }
+            this.setState({
+                toDolist: listData,
+                isLoading: false
+            });
         })
-        // fetch('/api/list')
-        //     .then(res => res.json())
-        //     .then(list => {
-        //         let listData = [];
-        //         for (let i = 0; i < list.nextid; i++) {
-        //             let task = list[i];
-        //             let data = {
-        //                 id: i,
-        //                 text: task.text,
-        //                 topic: task.topic,
-        //                 time: task.time,
-        //                 location: task.location
-        //             }
-        //             listData.unshift(data);
-        //         }
-        //         this.setState({
-        //             toDolist: listData,
-        //             isLoading: false
-        //         });
-        //     })
-        //     .catch(err => console.log(err));
+        .catch(err => console.log(err));
         // When done, change isLoading to false
     }
 
