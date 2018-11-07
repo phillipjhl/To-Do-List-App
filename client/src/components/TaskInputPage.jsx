@@ -21,6 +21,7 @@ class TaskInputPage extends Component {
     handleChange(e) {
         const target = e.target;
         const value = target.value;
+        const name = target.name;
     }
 
     handlePost(e) {
