@@ -28,3 +28,7 @@ function get(url) {
 function post(url, payload) {
     return json(url, 'POST', payload);
 }
+
+function put(url, payload) {
+    return json(url, 'PUT', payload);
+}
