@@ -12,4 +12,9 @@ function json(url, method = 'GET', payload = {}) {
             'Content-Type': 'application/json',
         })
     };
+
+    // GET request do not conatin a body
+    if (method === 'GET') {
+        delete data.body;
+    }
 }
