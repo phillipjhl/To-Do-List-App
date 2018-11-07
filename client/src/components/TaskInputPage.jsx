@@ -47,13 +47,15 @@ class TaskInputPage extends Component {
                         <option>Family</option>
                     </select>
 
-                    <input type="text" name="text" id="input-text" className="form-control mb-3" placeholder="What do you need to do?" value={this.state.text} onChange={this.handleChange}/>
+                    <input type="text" name="text" id="input-text" className="form-control mb-3" placeholder="What do you need to do?" value={this.state.text} onChange={this.handleChange} />
 
-                    <input type="text" name="location" id="input-location" className="form-control mb-3" placeholder="Location" value={this.state.location} onChange={this.handleChange}/>
+                    <input type="text" name="location" id="input-location" className="form-control mb-3" placeholder="Location" value={this.state.location} onChange={this.handleChange} />
 
-                    <input type="text" name="time" id="input-time" className="form-control mb-3" placeholder="Time" value={this.state.time} onChange={this.handleChange}/>
+                    <input type="text" name="time" id="input-time" className="form-control mb-3" placeholder="Time" value={this.state.time} onChange={this.handleChange} />
 
-                    <button type="button" className="btn btn-primary" onClick={this.handlePost}>Add New Task</button>
+                    <div className="form-row">
+                        <button type="button" className="btn btn-primary w-100 mx-auto" onClick={this.handlePost}>Add New Task</button>
+                    </div>
 
                 </form>
 
