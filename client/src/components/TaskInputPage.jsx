@@ -37,18 +37,21 @@ class TaskInputPage extends Component {
     render() {
         return (
             <div className="container">
-                <form className="form-group col-md-10 bg-light p-2" onSubmit={this.handlePost} >
+
+                <form className="form-group col-md-10 p-2" onSubmit={this.handlePost} >
 
                     <select id="input-topic" className="form-control">
                         <option defaultValue>Personal</option>
                         <option>Work</option>
                         <option>Family</option>
                     </select>
+
                     <input type="text" name="text" id="input-text" className="form-control" value={this.state.text} onChange={this.handleChange}/>
                     <input type="text" name="location" id="input-location" className="form-control" value={this.state.location} onChange={this.handleChange}/>
                     <input type="text" name="time" id="input-time" className="form-control" value={this.state.time} onChange={this.handleChange}/>
 
                 </form>
+
             </div>
         );
     }
