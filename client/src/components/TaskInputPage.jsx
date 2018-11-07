@@ -33,6 +33,17 @@ class TaskInputPage extends Component {
         // To prevent page reload
         e.preventDefault();
         // Will send a POST request to /api/list
+        let data = {
+            topic: this.state.topic,
+            text: this.state.text,
+            location: this.state.location,
+            time: this.state.time
+        };
+
+        post('/api/list', data)
+        .then(res => {
+            console.log(res);
+        });
     };
 
     render() {
