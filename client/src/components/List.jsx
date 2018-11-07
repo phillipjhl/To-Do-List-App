@@ -62,6 +62,7 @@ export default class ListPage extends Component {
                 <aside className="col-md-8">
                     <h2 className="col-sm-9 text-primary">To Do</h2>
                     {this.createList()}
+                    <h6 className="col-sm-2 text-muted my-2">{this.state.toDolist.length} Tasks</h6>
                 </aside>
             </Fragment>
         );
