@@ -22,7 +22,10 @@ export default class ListPage extends Component {
 
     componentDidMount() {
         // Call api
-        
+        Fetch.get('./api/list')
+        .then(res => {
+            console.log(res);
+        })
         // fetch('/api/list')
         //     .then(res => res.json())
         //     .then(list => {
