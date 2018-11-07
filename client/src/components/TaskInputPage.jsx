@@ -42,9 +42,9 @@ class TaskInputPage extends Component {
                         <option selected>Choose...</option>
                         <option>...</option>
                     </select>
-                    <input type="text" name="" id="" />
-                    <input type="text" name="" id="" />
-                    <input type="text" name="" id="" />
+                    <input type="text" name="text" id="input-text" />
+                    <input type="text" name="location" id="input-location" />
+                    <input type="text" name="time" id="input-time" />
 
                 </form>
             </div>
