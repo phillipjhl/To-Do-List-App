@@ -49,7 +49,7 @@ function put(url, payload) {
 }
 
 function destroy(url, payload) {
-    return json(url, 'DELETE', paload);
+    return json(url, 'DELETE', payload);
 }
 
 export {
