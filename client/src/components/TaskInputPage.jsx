@@ -41,8 +41,11 @@ class TaskInputPage extends Component {
         };
 
         post('/api/list', data)
-        .then(res => {
-            console.log(res);
+        .then(() => {
+            this.props.history.push('/list');
+        })
+        .catch(err => {
+            console.log(err);
         });
     };
 
