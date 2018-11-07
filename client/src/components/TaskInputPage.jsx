@@ -53,4 +53,4 @@ class TaskInputPage extends Component {
     }
 }
 
-export default AdminInput;
+export default TaskInputPage;
