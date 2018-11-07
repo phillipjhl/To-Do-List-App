@@ -22,6 +22,8 @@ function json(url, method = 'GET', payload = {}) {
         .then((response) => {
             if (respose.ok) {
                 //set headers
+                let contentType = response.headers.get('Content-Type');
+                
                 return response.statusText;
             }
 
