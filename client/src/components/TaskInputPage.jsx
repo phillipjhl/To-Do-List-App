@@ -39,7 +39,7 @@ class TaskInputPage extends Component {
             <div className="container">
                 <form className="form-group col-md-10 bg-light p-2" onSubmit={this.handlePost} >
 
-                    <select id="input-topic" class="form-control">
+                    <select id="input-topic" className="form-control">
                         <option selected>Choose...</option>
                         <option>...</option>
                     </select>
