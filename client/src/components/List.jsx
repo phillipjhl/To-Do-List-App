@@ -23,7 +23,6 @@ export default class ListPage extends Component {
     componentDidMount() {
         // Call api
         Fetch.get('/api/list')
-        .then(res => res.json())
         .then(list => {
             let listData = [];
             for (let i = 0; i < list.nextid; i++) {
