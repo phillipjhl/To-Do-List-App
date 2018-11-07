@@ -44,9 +44,9 @@ class TaskInputPage extends Component {
                         <option>Work</option>
                         <option>Family</option>
                     </select>
-                    <input type="text" name="text" id="input-text" value={this.state.text} onChange={this.handleChange}/>
-                    <input type="text" name="location" id="input-location" value={this.state.location} onChange={this.handleChange}/>
-                    <input type="text" name="time" id="input-time" value={this.state.time} onChange={this.handleChange}/>
+                    <input type="text" name="text" id="input-text" className="form-control" value={this.state.text} onChange={this.handleChange}/>
+                    <input type="text" name="location" id="input-location" className="form-control" value={this.state.location} onChange={this.handleChange}/>
+                    <input type="text" name="time" id="input-time" className="form-control" value={this.state.time} onChange={this.handleChange}/>
 
                 </form>
             </div>
