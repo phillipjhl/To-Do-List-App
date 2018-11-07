@@ -29,8 +29,9 @@ class TaskInputPage extends Component {
     }
 
     handlePost(e) {
-        //to prevent page reload
+        // To prevent page reload
         e.preventDefault();
+        // Will send a POST request to /api/list
     };
 
     render() {
