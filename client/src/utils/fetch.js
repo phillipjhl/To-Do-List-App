@@ -32,3 +32,7 @@ function post(url, payload) {
 function put(url, payload) {
     return json(url, 'PUT', payload);
 }
+
+function destroy(url, payload) {
+    return json(url, 'DELETE', paload);
+}
