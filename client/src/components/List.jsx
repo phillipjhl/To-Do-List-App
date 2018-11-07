@@ -5,6 +5,11 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import * as Fetch from '../utils/fetch.js';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+library.add(faPlusCircle);
+
 import Task from './Task';
 
 export default class ListPage extends Component {
@@ -23,25 +28,25 @@ export default class ListPage extends Component {
     componentDidMount() {
         // Call api
         Fetch.get('/api/list')
-        .then(list => {
-            let listData = [];
-            for (let i = 0; i < list.nextid; i++) {
-                let task = list[i];
-                let data = {
-                    id: i,
-                    text: task.text,
-                    topic: task.topic,
-                    time: task.time,
-                    location: task.location
+            .then(list => {
+                let listData = [];
+                for (let i = 0; i < list.nextid; i++) {
+                    let task = list[i];
+                    let data = {
+                        id: i,
+                        text: task.text,
+                        topic: task.topic,
+                        time: task.time,
+                        location: task.location
+                    }
+                    listData.unshift(data);
                 }
-                listData.unshift(data);
-            }
-            this.setState({
-                toDolist: listData,
-                isLoading: false
-            });
-        })
-        .catch(err => console.log(err));
+                this.setState({
+                    toDolist: listData,
+                    isLoading: false
+                });
+            })
+            .catch(err => console.log(err));
         // When done, change isLoading to false
     }
 
@@ -60,10 +65,20 @@ export default class ListPage extends Component {
         return (
             <Fragment>
                 <aside className="col-md-8">
-                    <h2 className="col-sm-9 text-primary">To Do</h2>
-                    <Link to="/input" className="col-sm-3">Add</Link>
+
+                    <div className="row justify-content-between">
+
+                        <h2 className="col-9 text-primary">To Do</h2>
+                        <Link to="/input" className="col-3">
+                            <FontAwesomeIcon icon={faPlusCircle} size="2x" />
+                        </Link>
+
+                    </div>
+
                     {this.createList()}
+
                     <h6 className="col-sm-2 text-muted my-2">{this.state.toDolist.length} Tasks</h6>
+
                 </aside>
             </Fragment>
         );
