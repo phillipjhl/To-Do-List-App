@@ -24,3 +24,7 @@ function json(url, method = 'GET', payload = {}) {
 function get(url) {
     return json(url);
 }
+
+function post(url, payload) {
+    return json(url, 'POST', payload);
+}
