@@ -23,7 +23,12 @@ function json(url, method = 'GET', payload = {}) {
             if (respose.ok) {
                 //set headers
                 let contentType = response.headers.get('Content-Type');
-                
+
+                // Parse response
+                if (contentType.indexOf('application/json') > -1) {
+                    return response.json();
+                }
+
                 return response.statusText;
             }
 
