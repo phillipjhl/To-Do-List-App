@@ -19,7 +19,7 @@ class TaskInputPage extends Component {
 
     //method to handle the text input and change state
     handleChange(e) {
-        
+        const target = e.target;
     }
 
     handlePost(e) {
