@@ -1,6 +1,7 @@
 //Component for User Input
 
 import React, { Component } from 'react';
+import { post } from '../utils/fetch';
 
 class TaskInputPage extends Component {
     constructor(props) {
