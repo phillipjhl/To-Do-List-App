@@ -22,6 +22,10 @@ class TaskInputPage extends Component {
         const target = e.target;
         const value = target.value;
         const name = target.name;
+
+        this.setState({
+            [name]: value
+        });
     }
 
     handlePost(e) {
