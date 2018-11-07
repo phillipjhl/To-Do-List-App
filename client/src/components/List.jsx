@@ -2,8 +2,8 @@
 // Will call api for data, map over data, create list of Task components
 
 import React, { Component, Fragment } from 'react';
-import 'isomorphic-fetch';
 import { Link } from 'react-router-dom';
+import '../utils/fetch.js';
 
 import Task from './Task';
 
