@@ -20,7 +20,7 @@ function json(url, method = 'GET', payload = {}) {
 
     return makeFetch(url, data)
         .then((response) => {
-            if (respose.ok) {
+            if (response.ok) {
                 //set headers
                 let contentType = response.headers.get('Content-Type');
 
