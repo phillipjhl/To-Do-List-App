@@ -19,6 +19,14 @@ function json(url, method = 'GET', payload = {}) {
     }
 
     return makeFetch(url, data)
+        .then((response) => {
+            if (respose.ok) {
+                //set headers
+                return response.statusText;
+            }
+
+            throw response;
+        });
 }
 
 function get(url) {
