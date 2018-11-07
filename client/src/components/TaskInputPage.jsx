@@ -36,19 +36,24 @@ class TaskInputPage extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="fluid-container d-flex">
 
-                <form className="form-group col-md-10 p-2" onSubmit={this.handlePost} >
+                <form className="form-group col-md-12 h-100 pt-5 mt-5 mx-auto" onSubmit={this.handlePost} >
 
-                    <select id="input-topic" className="form-control">
+                    <label htmlFor="input-topic">Choose a Topic:</label>
+                    <select name="topic" id="input-topic" className="form-control mb-2" onChange={this.handleChange}>
                         <option defaultValue>Personal</option>
                         <option>Work</option>
                         <option>Family</option>
                     </select>
 
-                    <input type="text" name="text" id="input-text" className="form-control" value={this.state.text} onChange={this.handleChange}/>
-                    <input type="text" name="location" id="input-location" className="form-control" value={this.state.location} onChange={this.handleChange}/>
-                    <input type="text" name="time" id="input-time" className="form-control" value={this.state.time} onChange={this.handleChange}/>
+                    <input type="text" name="text" id="input-text" className="form-control mb-2" placeholder="What do you need to do?" value={this.state.text} onChange={this.handleChange}/>
+
+                    <input type="text" name="location" id="input-location" className="form-control mb-2" placeholder="Location" value={this.state.location} onChange={this.handleChange}/>
+
+                    <input type="text" name="time" id="input-time" className="form-control mb-2" placeholder="Time" value={this.state.time} onChange={this.handleChange}/>
+
+                    <button type="button" className="btn btn-primary" onClick={this.handlePost}>Add New Task</button>
 
                 </form>
 
