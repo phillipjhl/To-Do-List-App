@@ -20,7 +20,7 @@ class Navigation extends Component {
                     <Switch>
                         <Route exact path="/" component={HomePage} />
                         <Route path="/list" component={ListPage} />
-                        <Route path="/list/input" component={TaskInputPage} />
+                        <Route path="/input" component={TaskInputPage} />
                     </Switch>
                 </Fragment>
             </Router>
