@@ -5,7 +5,12 @@ import React, { Component } from 'react';
 class TaskInputPage extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            topic: "",
+            text: "",
+            location: "",
+            time: ""
+        };
         this.handleChange = this.handleChange.bind(this);
         this.handlePost = this.handlePost.bind(this);
     }
