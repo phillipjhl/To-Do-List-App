@@ -20,8 +20,8 @@ class Task extends Component {
             <article className="card border-primary">
                 <div className="card-body">
                     <h5 className="card-title">{this.state.task.text}</h5>
-                    <h6 className="card-subtitle mb-2">{this.state.task.location}</h6>
-                    <span className="card-text">{this.state.task.time}</span>
+                    <h6 className="card-subtitle mb-2 text-muted">{this.state.task.location}</h6>
+                    <span className="card-text text-muted">{this.state.task.time}</span>
                 </div>
             </article>
         );
