@@ -11,6 +11,8 @@ class TaskInputPage extends Component {
             location: "",
             time: ""
         };
+
+        // Method binding
         this.handleChange = this.handleChange.bind(this);
         this.handlePost = this.handlePost.bind(this);
     }
@@ -21,6 +23,7 @@ class TaskInputPage extends Component {
     }
 
     handlePost(e) {
+        //to prevent page reload
         e.preventDefault();
     };
 
