@@ -20,3 +20,7 @@ function json(url, method = 'GET', payload = {}) {
 
     return makeFetch(url, data)
 }
+
+function get(url) {
+    return json(url);
+}
