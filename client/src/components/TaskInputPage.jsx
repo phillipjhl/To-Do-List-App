@@ -40,8 +40,9 @@ class TaskInputPage extends Component {
                 <form className="form-group col-md-10 bg-light p-2" onSubmit={this.handlePost} >
 
                     <select id="input-topic" className="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
+                        <option defaultValue>Personal</option>
+                        <option>Work</option>
+                        <option>Family</option>
                     </select>
                     <input type="text" name="text" id="input-text" value={this.state.text} onChange={this.handleChange}/>
                     <input type="text" name="location" id="input-location" value={this.state.location} onChange={this.handleChange}/>
