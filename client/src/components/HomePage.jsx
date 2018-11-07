@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class HomePage extends Component {
 
@@ -9,10 +10,7 @@ export default class HomePage extends Component {
                 <main role="main" className="inner cover">
                     <h1 className="cover-heading">Welcome to Your New Way of Doing!</h1>
                     <p className="lead">Create Tasks and Get Them Them Done</p>
-                    <p className="lead">
-                        {/* will be Link to listPage */}
-                        <a href="#" className="btn btn-lg btn-secondary">Let's Get Started</a>
-                    </p>
+                    <Link to="/list" className="btn btn-lg" type="btn" aria-label="Let's Get Started">Let's Get Started</Link>
                 </main>
             </div>
         );
