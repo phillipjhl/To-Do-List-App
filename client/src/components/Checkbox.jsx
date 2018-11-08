@@ -14,7 +14,10 @@ export default class Checkbox extends Component {
 
     handleClick() {
         console.log('here');
-        this.props.onClick();
+        this.setState(prevState => ({
+            isCompleted: !prevState.isCompleted
+          }));
+        this.props.onClick(this.state.isCompleted);
         // Reverse State of is Completed
         // Call passed down parent method to also change state of parent component
     }
