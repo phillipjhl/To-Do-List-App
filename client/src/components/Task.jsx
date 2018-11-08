@@ -38,14 +38,14 @@ class Task extends Component {
         return (
             <article className="card border-primary">
 
-                <div className="card-body">
+                <div className="card-body pb-1">
 
                     <form className="form-group">
 
                         <div className="form-row">
 
                             <input
-                                className="card-title form-control col-10"
+                                className="form-control col-10"
                                 name="text"
                                 value={this.state.text}
                                 placeholder={this.state.text}
@@ -58,7 +58,7 @@ class Task extends Component {
                         </div>
 
                         <input
-                            className="card-subtitle mb-2 text-muted form-control"
+                            className="text-muted form-control"
                             name="location"
                             value={this.state.location}
                             placeholder={this.state.location}
@@ -67,7 +67,7 @@ class Task extends Component {
                         </input>
 
                         <input
-                            className="card-text text-muted form-control"
+                            className="text-muted form-control"
                             name="time"
                             value={this.state.time}
                             placeholder={this.state.time}
