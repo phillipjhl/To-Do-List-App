@@ -57,9 +57,9 @@ class TaskInputPage extends Component {
 
             <Jumbotron titleOne="Add" titleTwo="Task" />
 
-            <div className="fluid-container d-flex bg-light">
+            <div className="fluid-container d-flex bg-light pt-3">
 
-                <form className="form-group col-md-12 h-100 pt-5 mt-5 mx-auto" onSubmit={this.handlePost} >
+                <form className="form-group col-md-12 h-100 py-5 mx-auto" onSubmit={this.handlePost} >
 
                     <label htmlFor="input-topic">Choose a Topic:</label>
                     <select name="topic" id="input-topic" className="form-control mb-3" onChange={this.handleChange}>

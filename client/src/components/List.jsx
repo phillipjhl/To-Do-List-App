@@ -62,7 +62,7 @@ export default class ListPage extends Component {
     render() {
         return (
             <Fragment>
-                <aside className="col-md-8">
+                <aside className="col-md-8 pt-3">
 
                     <div className="row justify-content-between">
 
