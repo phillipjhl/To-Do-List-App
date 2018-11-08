@@ -22,6 +22,7 @@ export default class ListPage extends Component {
 
         //method binding for calling and performance
         this.createList = this.createList.bind(this);
+        this.getListLength = this.getListLength.bind(this);
     }
 
     componentDidMount() {
@@ -30,16 +31,16 @@ export default class ListPage extends Component {
             .then(list => {
                 let listData = [];
                 for (let key in list) {
-                        if (key !== 'nextid') {
-                            let data = {
-                                id: key,
-                                text: list[key].text,
-                                topic: list[key].topic,
-                                time: list[key].time,
-                                location: list[key].location
-                            }
-                            listData.unshift(data);
+                    if (key !== 'nextid') {
+                        let data = {
+                            id: key,
+                            text: list[key].text,
+                            topic: list[key].topic,
+                            time: list[key].time,
+                            location: list[key].location
                         }
+                        listData.unshift(data);
+                    }
                 }
                 this.setState({
                     toDolist: listData,
@@ -58,8 +59,10 @@ export default class ListPage extends Component {
         return taskList;
     }
 
-
-
+    getListLength() {
+        let length = this.state.toDolist.length;
+        return length;
+    }
 
     render() {
 
@@ -86,7 +89,7 @@ export default class ListPage extends Component {
 
                     {this.createList()}
 
-                    <h6 className="col-sm-3 text-muted my-2 py-1">{this.state.toDolist.length} Tasks To Do</h6>
+                    <h6 className="col-sm-3 text-muted my-2 py-1">{this.getListLength()} Tasks To Do</h6>
 
                 </aside>
             </Fragment>
