@@ -35,14 +35,42 @@ class Task extends Component {
         console.log(this.state);
         return (
             <article className="card border-primary">
+
                 <div className="card-body">
-                    <h5 className="card-title">
-                        {this.state.text}
-                        <FontAwesomeIcon icon={faEllipsisV} size="1x" className="float-right" />
-                    </h5>
-                    <h6 className="card-subtitle mb-2 text-muted">{this.state.location}</h6>
-                    <span className="card-text text-muted">{this.state.time}</span>
+
+                    <span className="float-right">
+                        <FontAwesomeIcon icon={faEllipsisV} size="1x" />
+                    </span>
+
+                    <input
+                        className="card-title form-control d-inline-block"
+                        name="text"
+                        value={this.state.text}
+                        placeholder={this.state.text}
+                        onChange={this.handleChange}
+                    >
+                    </input>
+
+                    <input
+                        className="card-subtitle mb-2 text-muted form-control"
+                        name="location"
+                        value={this.state.location}
+                        placeholder={this.state.location}
+                        onChange={this.handleChange}
+                    >
+                    </input>
+
+                    <input
+                        className="card-text text-muted form-control"
+                        name="time"
+                        value={this.state.time}
+                        placeholder={this.state.time}
+                        onChange={this.handleChange}
+                    >
+                    </input>
+
                 </div>
+
             </article>
         );
     }
