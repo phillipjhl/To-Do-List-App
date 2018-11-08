@@ -3,9 +3,11 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faUsers, faUser, faTasks, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faUsers, faUser, faTasks } from '@fortawesome/free-solid-svg-icons';
 
 import { put } from '../utils/fetch';
+
+import OptionsIcon from './OptionsIcon';
 
 class Task extends Component {
     constructor(props) {
@@ -95,9 +97,9 @@ class Task extends Component {
                 <div className="card-body p-2 shadow">
 
                     <div className="container-fluid d-flex justify-content-between">
-                        <FontAwesomeIcon icon={this.state.icon} size="2x" />
+                        <FontAwesomeIcon icon={this.state.icon} size="2x" className="text-contrast" />
 
-                        {/* Options Component */}
+                        <OptionsIcon />
                     </div>
 
                     <form className="form-group" onSubmit={this.handleSubmit}>
