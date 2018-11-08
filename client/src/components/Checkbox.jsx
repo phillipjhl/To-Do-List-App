@@ -13,6 +13,7 @@ export default class Checkbox extends Component {
     }
 
     handleClick() {
+        console.log('here');
         this.props.onClick();
         // Reverse State of is Completed
         // Call passed down parent method to also change state of parent component
@@ -21,7 +22,7 @@ export default class Checkbox extends Component {
     render() {
         return (
 
-                <span onClick={this.handleCLick}>
+                <span onClick={this.handleClick}>
                     <FontAwesomeIcon icon={faCheck} size="2x" />
                 </span>
         
