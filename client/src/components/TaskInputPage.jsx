@@ -68,7 +68,7 @@ class TaskInputPage extends Component {
                         <option>Family</option>
                     </select>
 
-                    <input type="text" name="text" id="input-text" className="form-control mb-3" placeholder="What do you need to do?" value={this.state.text} onChange={this.handleChange} />
+                    <textarea rows="3" type="text" name="text" id="input-text" className="form-control mb-3" placeholder="What do you need to do?" value={this.state.text} onChange={this.handleChange} />
 
                     <input type="text" name="location" id="input-location" className="form-control mb-3" placeholder="Location" value={this.state.location} onChange={this.handleChange} />
 
