@@ -29,16 +29,17 @@ export default class ListPage extends Component {
         Fetch.get('/api/list')
             .then(list => {
                 let listData = [];
-                for (let i = 0; i < list.nextid; i++) {
-                    let task = list[i];
-                    let data = {
-                        id: i,
-                        text: task.text,
-                        topic: task.topic,
-                        time: task.time,
-                        location: task.location
-                    }
-                    listData.unshift(data);
+                for (let key in list) {
+                        if (key !== 'nextid') {
+                            let data = {
+                                id: key,
+                                text: list[key].text,
+                                topic: list[key].topic,
+                                time: list[key].time,
+                                location: list[key].location
+                            }
+                            listData.unshift(data);
+                        }
                 }
                 this.setState({
                     toDolist: listData,
