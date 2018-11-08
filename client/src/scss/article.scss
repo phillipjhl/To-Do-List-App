@@ -1,0 +1,7 @@
+article.card {
+    transition: border-bottom-width .25s;
+}
+
+article.card:hover {
+    border-bottom-width: 3px;
+}
