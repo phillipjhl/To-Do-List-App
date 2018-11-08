@@ -28,6 +28,7 @@ class Task extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.determineIcon = this.determineIcon.bind(this);
+        this.handleCompletion = this.handleCompletion.bind(this);
     }
     
     componentDidMount() {
@@ -145,7 +146,7 @@ class Task extends Component {
 
                     </form>
 
-                    <Checkbox onClick={this.handleCompletion(value)} />
+                    <Checkbox onClick={this.handleCompletion} />
 
                 </div>
 
