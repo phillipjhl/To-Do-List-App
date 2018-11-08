@@ -59,7 +59,7 @@ class TaskInputPage extends Component {
 
             <div className="fluid-container d-flex bg-light pt-3">
 
-                <form className="form-group col-md-12 h-100 py-5 mx-auto" onSubmit={this.handlePost} >
+                <form className="form-group col-md-10 h-100 py-5 mx-auto" onSubmit={this.handlePost} >
 
                     <label htmlFor="input-topic">Choose a Topic:</label>
                     <select name="topic" id="input-topic" className="form-control mb-3" onChange={this.handleChange}>
