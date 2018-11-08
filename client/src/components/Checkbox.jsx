@@ -5,30 +5,24 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 export default class Checkbox extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            isCompleted: false
-        }
+        this.state = {}
 
         this.handleClick = this.handleClick.bind(this);
     }
 
+    // Reverse State of is Completed
+    // Call passed down parent method to also change state of parent component
     handleClick() {
-        console.log('here');
-        this.setState(prevState => ({
-            isCompleted: !prevState.isCompleted
-          }));
-        this.props.onClick(this.state.isCompleted);
-        // Reverse State of is Completed
-        // Call passed down parent method to also change state of parent component
+        this.props.onClick();
     }
 
     render() {
         return (
 
-                <span onClick={this.handleClick}>
-                    <FontAwesomeIcon icon={faCheck} size="2x" />
-                </span>
-        
+            <span onClick={this.handleClick}>
+                <FontAwesomeIcon icon={faCheck} size="2x" />
+            </span>
+
         );
     }
 }

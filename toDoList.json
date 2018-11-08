@@ -1,10 +1,4 @@
 {
-  "0": {
-    "text": "Take daughter to dance",
-    "topic": "Family",
-    "time": "10:30 AM",
-    "location": "Dance Studio"
-  },
   "2": {
     "text": "Take daughter to dance",
     "topic": "Family",
@@ -17,5 +11,17 @@
     "time": "7 AM",
     "location": "Home"
   },
-  "nextid": 4
+  "4": {
+    "text": "Do Stuff",
+    "topic": "Work",
+    "time": "7 AM",
+    "location": "Office"
+  },
+  "5": {
+    "topic": "Work",
+    "text": "More Stuff",
+    "location": "The office",
+    "time": "4PM"
+  },
+  "nextid": 6
 }

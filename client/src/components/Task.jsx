@@ -1,9 +1,9 @@
 //Individual Task Component
 
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faUsers, faUser, faTasks } from '@fortawesome/free-solid-svg-icons';
+import $ from 'jquery';
 
 import { put } from '../utils/fetch';
 
@@ -38,15 +38,17 @@ class Task extends Component {
 
     // Handle what happens when task is checked as completed
     async handleCompletion() {
-        // Toggling value
-        console.log('here');
-
-        console.log(this.state.isCompleted);
+        // Toggling value of isCompleted
         await this.setState(prevState => ({
             isCompleted: !prevState.isCompleted
           }));
-        console.log('complete');
-        console.log(this.state.isCompleted);
+
+        if (this.state.isCompleted) {
+            //fade with opacity
+            
+            //make DELETE request
+            //display good job
+        }
     }
 
     determineIcon() {
@@ -69,12 +71,11 @@ class Task extends Component {
         }
     }
 
-
     handleChange(e) {
         const target = e.target;
         const value = target.value;
         const name = target.name;
-
+    
         this.setState({
             [name]: value
         });
