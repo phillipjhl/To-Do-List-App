@@ -3,7 +3,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faUsers, faUser, faTasks } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faUsers, faUser, faTasks, faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 
 import { put } from '../utils/fetch';
 
@@ -85,18 +85,22 @@ class Task extends Component {
 
                 <div className="card-body p-2 shadow">
 
-                    <FontAwesomeIcon icon={this.state.icon} size="3x" />
+                    <div className="container-fluid d-flex justify-content-between">
+                        <FontAwesomeIcon icon={this.state.icon} size="2x" />
+
+                        <FontAwesomeIcon icon={faEllipsisV} size="2x" />
+                    </div>
 
                     <form className="form-group" onSubmit={this.handleSubmit}>
 
-                            <input
-                                className="form-control form-control-lg"
-                                name="text"
-                                value={this.state.text}
-                                placeholder={this.state.text}
-                                onChange={this.handleChange}
-                            >
-                            </input>
+                        <input
+                            className="form-control form-control-lg"
+                            name="text"
+                            value={this.state.text}
+                            placeholder={this.state.text}
+                            onChange={this.handleChange}
+                        >
+                        </input>
 
                         <input
                             className="text-muted form-control"
@@ -115,10 +119,6 @@ class Task extends Component {
                             onChange={this.handleChange}
                         >
                         </input>
-
-                        {/* <div className="form-row">
-                            <button type="button" className="btn btn-primary w-100 mx-auto" onClick={this.handleSubmit}>Add New Task</button>
-                        </div> */}
 
                     </form>
 
