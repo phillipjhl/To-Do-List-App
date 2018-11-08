@@ -30,29 +30,23 @@ class Task extends Component {
         this.determineIcon = this.determineIcon.bind(this);
         this.handleCompletion = this.handleCompletion.bind(this);
     }
-    
+
     componentDidMount() {
         // Dynamically set the tasks's icon based on the topic
         this.determineIcon();
     }
 
     // Handle what happens when task is checked as completed
-    handleCompletion(value) {
+    async handleCompletion() {
         // Toggling value
-        if (value) {
-            this.setState({
-                isCompleted: true
-            });
-        } else {
-            this.setState({
-                isCompleted: false
-            });
-        }
-        
+        console.log('here');
 
-        
+        console.log(this.state.isCompleted);
+        await this.setState(prevState => ({
+            isCompleted: !prevState.isCompleted
+          }));
         console.log('complete');
-        console.log(this.state);
+        console.log(this.state.isCompleted);
     }
 
     determineIcon() {
