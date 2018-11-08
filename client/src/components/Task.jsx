@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faUsers, faUser, faTasks } from '@fortawesome/free-solid-svg-icons';
 import $ from 'jquery';
 
-import { put } from '../utils/fetch';
+import { put, destroy } from '../utils/fetch';
 
 import OptionsIcon from './OptionsIcon';
 import Checkbox from './Checkbox';
@@ -46,6 +46,10 @@ class Task extends Component {
         if (this.state.isCompleted) {
             // fade with opacity
             $(`#task-${this.props.id}`).addClass('delete');
+            destroy(`/api/list/${this.props.id}`)
+            .then((res)=>{
+                $(`#task-${this.props.id}`).remove();
+            });
             // make DELETE request
             // display good job
         }
