@@ -1,1 +1,21 @@
-{"0":{"topic":"","text":"Finish Project","location":"Home","time":"5PM"},"nextid":1}
+{
+  "0": {
+    "text": "Take daughter to dance",
+    "topic": "Family",
+    "time": "10:30 AM",
+    "location": "Dance Studio"
+  },
+  "2": {
+    "text": "Take daughter to dance",
+    "topic": "Family",
+    "time": "10:30 AM",
+    "location": "Dance Studio"
+  },
+  "3": {
+    "text": "Eat",
+    "topic": "Personal",
+    "time": "7 AM",
+    "location": "Home"
+  },
+  "nextid": 4
+}
