@@ -46,12 +46,11 @@ class Task extends Component {
         if (this.state.isCompleted) {
             // fade with opacity
             $(`#task-${this.props.id}`).addClass('delete');
-            destroy(`/api/list/${this.props.id}`)
-            .then((res)=>{
-                $(`#task-${this.props.id}`).remove();
-            });
             // make DELETE request
-            // display good job
+            setTimeout( () => {
+                $(`#task-${this.props.id}`).remove();
+            }, 750);
+            
         }
     }
 
