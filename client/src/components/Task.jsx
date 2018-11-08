@@ -40,6 +40,11 @@ class Task extends Component {
                 icon: faUser
             });
             return;
+        } else if (topic === "Family") {
+            this.setState({
+                icon: faUsers
+            });
+            return;
         }
     }
 
