@@ -3,5 +3,12 @@
     border-right: none;
     border-top: none;
     border-radius: 0;
-    border-bottom-color: grey;
+    border-bottom-color: rgb(86, 96, 235);
+    transition: border-color, border-bottom-width .5s;
+}
+
+.form-control:focus {
+    border-color: rgb(25, 73, 114);
+    border-bottom-width: 3px;
+    box-shadow: none;
 }
