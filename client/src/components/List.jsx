@@ -4,6 +4,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import * as Fetch from '../utils/fetch.js';
+import $ from 'jquery';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
@@ -61,6 +62,12 @@ export default class ListPage extends Component {
 
 
     render() {
+
+        //initializing tooltips
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
         return (
             <Fragment>
                 <aside className="col-md-8 pt-3 bg-light">
@@ -68,10 +75,12 @@ export default class ListPage extends Component {
                     <div className="row justify-content-between">
 
                         <h2 className="col-9 text-primary">To Do</h2>
-                        
-                        <Link to="/input" className="col-2 add-task">
-                            <FontAwesomeIcon icon={faPlus} size="2x" />
-                        </Link>
+
+                        <span className="col-2">
+                            <Link to="/input" className="add-task" alt="add task" data-toggle="tooltip" data-placement="top" title="Add Task">
+                                <FontAwesomeIcon icon={faPlus} size="2x" />
+                            </Link>
+                        </span>
 
                     </div>
 

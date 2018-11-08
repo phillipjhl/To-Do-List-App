@@ -52,7 +52,6 @@ class Task extends Component {
     }
 
     render() {
-        console.log(this.props.id);
         return (
             <article className="card border-primary">
 
