@@ -31,7 +31,16 @@ class Task extends Component {
         });
     }
 
+    handleSubmit(e) {
+        e.preventDefault();
 
+        let data = {
+            topic: this.state.topic,
+            text: this.state.text,
+            location: this.state.location,
+            time: this.state.time
+        };
+    }
 
     render() {
         console.log(this.state);
