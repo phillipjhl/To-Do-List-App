@@ -17,7 +17,7 @@ class Navigation extends Component {
                 <Fragment>
                     <NavBar />
                     <Switch>
-                        <Route exact path="/" component={HomePage} />
+                        <Route exact path="/" component={ListPage} />
                         <Route path="/list" component={ListPage} />
                         <Route path="/input" component={TaskInputPage} />
                     </Switch>
