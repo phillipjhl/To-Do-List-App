@@ -8,6 +8,7 @@ import { faBriefcase, faUsers, faUser, faTasks } from '@fortawesome/free-solid-s
 import { put } from '../utils/fetch';
 
 import OptionsIcon from './OptionsIcon';
+import Checkbox from './Checkbox';
 
 class Task extends Component {
     constructor(props) {
@@ -35,11 +36,22 @@ class Task extends Component {
     }
 
     // Handle what happens when task is checked as completed
-    handleCompletion() {
+    handleCompletion(value) {
         // Toggling value
-        this.setState(prevState => ({
-            isCompleted: !prevState.isCompleted
-          }));
+        if (value) {
+            this.setState({
+                isCompleted: true
+            });
+        } else {
+            this.setState({
+                isCompleted: false
+            });
+        }
+        
+
+        
+        console.log('complete');
+        console.log(this.state);
     }
 
     determineIcon() {
@@ -132,6 +144,8 @@ class Task extends Component {
                         </input>
 
                     </form>
+
+                    <Checkbox onClick={this.handleCompletion(value)} />
 
                 </div>
 
