@@ -44,7 +44,7 @@ class Task extends Component {
             time: this.state.time
         };
 
-        put(`/api/list/${this.props.id}`)
+        put(`/api/list/${this.props.id}`, data)
         .then(()=>{
             console.log('here');
         })
@@ -52,7 +52,7 @@ class Task extends Component {
     }
 
     render() {
-        console.log(this.state);
+        console.log(this.props.id)
         return (
             <article className="card border-primary">
 
