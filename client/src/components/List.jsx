@@ -74,9 +74,9 @@ export default class ListPage extends Component {
 
                     <div className="row justify-content-between">
 
-                        <h2 className="col-9 text-primary">To Do</h2>
+                        <h2 className="col-10 text-primary">To Do</h2>
 
-                        <span className="col-2">
+                        <span className="float-right mx-auto">
                             <Link to="/input" className="add-task" alt="add task" data-toggle="tooltip" data-placement="top" title="Add Task">
                                 <FontAwesomeIcon icon={faPlus} size="2x" />
                             </Link>
@@ -86,7 +86,7 @@ export default class ListPage extends Component {
 
                     {this.createList()}
 
-                    <h6 className="col-sm-2 text-muted my-2 py-1">{this.state.toDolist.length} Tasks</h6>
+                    <h6 className="col-sm-2 text-muted my-2 py-1">{this.state.toDolist.length} Tasks To Do</h6>
 
                 </aside>
             </Fragment>
