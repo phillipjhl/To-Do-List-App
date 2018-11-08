@@ -70,7 +70,7 @@ export default class ListPage extends Component {
 
         return (
             <Fragment>
-                <aside className="col-md-8 pt-3 bg-light">
+                <aside className="col-md-12 col-lg-8 pt-3 bg-light">
 
                     <div className="row justify-content-between">
 
