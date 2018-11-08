@@ -3,7 +3,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faUsers, faUser, faTasks } from '@fortawesome/free-solid-svg-icons';
 
 import { put } from '../utils/fetch';
 
@@ -17,11 +17,29 @@ class Task extends Component {
             location: this.props.data.location,
             time: this.props.data.time,
 
+            icon: null,
+
             isCompleted: false
         }
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    determineIcon() {
+        let topic = this.state.topic;
+        let icon = this.state.icon;
+        if (topic == "work") {
+            let icon = faBriefcase;
+            return;
+        } else if (topic == "family") {
+            let icon = faUsers;
+            return;
+        } else if (topic == "personal") {
+            let icon = faUser;
+        } else {
+            let icon = faTasks;
+        }
     }
 
     handleChange(e) {
@@ -59,20 +77,14 @@ class Task extends Component {
 
                     <form className="form-group" onSubmit={this.handleSubmit}>
 
-                        <div className="form-row">
-
                             <input
-                                className="form-control col-10"
+                                className="form-control"
                                 name="text"
                                 value={this.state.text}
                                 placeholder={this.state.text}
                                 onChange={this.handleChange}
                             >
                             </input>
-
-                            <FontAwesomeIcon icon={faEllipsisV} size="1x" className="float-right col-1" />
-
-                        </div>
 
                         <input
                             className="text-muted form-control"
