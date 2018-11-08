@@ -63,7 +63,7 @@ export default class ListPage extends Component {
     render() {
         return (
             <Fragment>
-                <aside className="col-md-8 pt-3">
+                <aside className="col-md-8 pt-3 bg-light">
 
                     <div className="row justify-content-between">
 
@@ -77,7 +77,7 @@ export default class ListPage extends Component {
 
                     {this.createList()}
 
-                    <h6 className="col-sm-2 text-muted my-2">{this.state.toDolist.length} Tasks</h6>
+                    <h6 className="col-sm-2 text-muted my-2 py-1">{this.state.toDolist.length} Tasks</h6>
 
                 </aside>
             </Fragment>
