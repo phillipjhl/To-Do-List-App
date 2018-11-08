@@ -28,9 +28,8 @@ export default class ListPage extends Component {
         // Call api
         Fetch.get('/api/list')
             .then(list => {
-                console.log(list.nextid);
                 let listData = [];
-                for (let i = list.nextid; i < list.nextid; i++) {
+                for (let i = 0; i < list.nextid; i++) {
                     let task = list[i];
                     let data = {
                         id: i,
