@@ -12,7 +12,7 @@ class Task extends Component {
         super(props);
         this.state = {
             //setting passed prop object into state
-            topic: this.props.data,
+            topic: this.props.data.topic,
             text: this.props.data.text,
             location: this.props.data.location,
             time: this.props.data.time,
@@ -24,6 +24,7 @@ class Task extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.determineIcon = this.determineIcon.bind(this);
     }
 
     determineIcon() {
@@ -31,14 +32,16 @@ class Task extends Component {
         let icon = this.state.icon;
         if (topic == "work") {
             let icon = faBriefcase;
-            return;
+            return icon;
         } else if (topic == "family") {
             let icon = faUsers;
-            return;
+            return icon;
         } else if (topic == "personal") {
             let icon = faUser;
+            return icon;
         } else {
             let icon = faTasks;
+            return icon;
         }
     }
 
@@ -74,6 +77,8 @@ class Task extends Component {
             <article className="card border-primary">
 
                 <div className="card-body pb-1">
+
+                    <FontAwesomeIcon icon={this.determineIcon()} size="3x" />
 
                     <form className="form-group" onSubmit={this.handleSubmit}>
 
