@@ -86,7 +86,7 @@ export default class ListPage extends Component {
 
                     {this.createList()}
 
-                    <h6 className="col-sm-2 text-muted my-2 py-1">{this.state.toDolist.length} Tasks To Do</h6>
+                    <h6 className="col-sm-3 text-muted my-2 py-1">{this.state.toDolist.length} Tasks To Do</h6>
 
                 </aside>
             </Fragment>
