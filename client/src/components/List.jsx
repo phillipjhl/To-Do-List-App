@@ -44,7 +44,7 @@ export default class ListPage extends Component {
                 }
                 this.setState({
                     toDolist: listData,
-                    // isLoading: false
+                    isLoading: false
                 });
             })
             .catch(err => console.log(err));
@@ -81,31 +81,32 @@ export default class ListPage extends Component {
                     
                 </div>
             );
+        } else {
+            return (
+                <Fragment>
+                    <aside className="col-md-12 col-lg-8 pt-3 bg-light">
+    
+                        <div className="row justify-content-between">
+    
+                            <h2 className="col-10 text-primary">To Do</h2>
+    
+                            <span className="float-right mx-auto">
+                                <Link to="/input" className="add-task" alt="add task" data-toggle="tooltip" data-placement="top" title="Add Task">
+                                    <FontAwesomeIcon icon={faPlus} size="2x" />
+                                </Link>
+                            </span>
+    
+                        </div>
+    
+                        {this.createList()}
+    
+                        <h6 className="col-sm-3 text-muted my-2 py-1">{this.getListLength()} Tasks To Do</h6>
+    
+                    </aside>
+                </Fragment>
+            );
         }
-
-        return (
-            <Fragment>
-                <aside className="col-md-12 col-lg-8 pt-3 bg-light">
-
-                    <div className="row justify-content-between">
-
-                        <h2 className="col-10 text-primary">To Do</h2>
-
-                        <span className="float-right mx-auto">
-                            <Link to="/input" className="add-task" alt="add task" data-toggle="tooltip" data-placement="top" title="Add Task">
-                                <FontAwesomeIcon icon={faPlus} size="2x" />
-                            </Link>
-                        </span>
-
-                    </div>
-
-                    {this.createList()}
-
-                    <h6 className="col-sm-3 text-muted my-2 py-1">{this.getListLength()} Tasks To Do</h6>
-
-                </aside>
-            </Fragment>
-        );
+        
     }
 
 }
