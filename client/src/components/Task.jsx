@@ -34,6 +34,12 @@ class Task extends Component {
             this.setState({
                 icon: faBriefcase
             });
+            return;
+        } else if (topic === "Personal") {
+            this.setState({
+                icon: faUser
+            });
+            return;
         }
     }
 
