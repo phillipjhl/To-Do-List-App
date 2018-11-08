@@ -35,7 +35,7 @@ class Task extends Component {
     }
 
     handleSubmit(e) {
-        e.preventDefault();
+        // e.preventDefault();
 
         let data = {
             topic: this.state.topic,
@@ -45,14 +45,14 @@ class Task extends Component {
         };
 
         put(`/api/list/${this.props.id}`, data)
-        .then(()=>{
-            console.log('here');
-        })
-        .catch(e=>console.log(e));
+            .then(() => {
+                console.log('here');
+            })
+            .catch(e => console.log(e));
     }
 
     render() {
-        console.log(this.props.id)
+        console.log(this.props.id);
         return (
             <article className="card border-primary">
 
@@ -92,6 +92,10 @@ class Task extends Component {
                             onChange={this.handleChange}
                         >
                         </input>
+
+                        {/* <div className="form-row">
+                            <button type="button" className="btn btn-primary w-100 mx-auto" onClick={this.handleSubmit}>Add New Task</button>
+                        </div> */}
 
                     </form>
 
