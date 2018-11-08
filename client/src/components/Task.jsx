@@ -97,7 +97,7 @@ class Task extends Component {
                     <div className="container-fluid d-flex justify-content-between">
                         <FontAwesomeIcon icon={this.state.icon} size="2x" />
 
-                        <FontAwesomeIcon icon={faEllipsisV} size="2x" />
+                        {/* Options Component */}
                     </div>
 
                     <form className="form-group" onSubmit={this.handleSubmit}>
