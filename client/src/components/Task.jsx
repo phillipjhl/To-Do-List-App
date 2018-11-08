@@ -44,10 +44,10 @@ class Task extends Component {
           }));
 
         if (this.state.isCompleted) {
-            //fade with opacity
-            
-            //make DELETE request
-            //display good job
+            // fade with opacity
+            $(`#task-${this.props.id}`).addClass('delete');
+            // make DELETE request
+            // display good job
         }
     }
 
@@ -100,7 +100,7 @@ class Task extends Component {
 
     render() {
         return (
-            <article className="card border-primary mb-2">
+            <article id={`task-${this.props.id}`} className="card border-primary mb-2">
 
                 <div className="card-body p-2 shadow">
 
