@@ -63,9 +63,9 @@ class TaskInputPage extends Component {
 
                     <label htmlFor="input-topic">Choose a Topic:</label>
                     <select name="topic" id="input-topic" className="form-control mb-3" onChange={this.handleChange}>
-                        <option defaultValue>Personal</option>
-                        <option>Work</option>
-                        <option>Family</option>
+                        <option className="bg-white" defaultValue>Personal</option>
+                        <option className="bg-white">Work</option>
+                        <option className="bg-white">Family</option>
                     </select>
 
                     <textarea rows="3" type="text" name="text" id="input-text" className="form-control mb-3" placeholder="What do you need to do?" value={this.state.text} onChange={this.handleChange} />
