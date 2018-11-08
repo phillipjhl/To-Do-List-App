@@ -43,44 +43,44 @@ class TaskInputPage extends Component {
         };
 
         post('/api/list', data)
-        .then(() => {
-            this.props.history.push('/list');
-        })
-        .catch(err => {
-            console.log(err);
-        });
+            .then(() => {
+                this.props.history.push('/list');
+            })
+            .catch(err => {
+                console.log(err);
+            });
     };
 
     render() {
         return (
             <Fragment>
 
-            <Jumbotron titleOne="Add" titleTwo="Task" />
+                <Jumbotron titleOne="Add" titleTwo="Task" />
 
-            <div className="fluid-container d-flex bg-light pt-3">
+                <div className="fluid-container d-flex bg-light pt-3">
 
-                <form className="form-group col-md-10 h-100 py-5 mx-auto" onSubmit={this.handlePost} >
+                    <form className="form-group col-md-10 h-100 py-5 mx-auto needs-validation" onSubmit={this.handlePost} >
 
-                    <label htmlFor="input-topic">Choose a Topic:</label>
-                    <select name="topic" id="input-topic" className="form-control mb-3" onChange={this.handleChange}>
-                        <option className="bg-white" defaultValue>Personal</option>
-                        <option className="bg-white">Work</option>
-                        <option className="bg-white">Family</option>
-                    </select>
+                        <label htmlFor="input-topic">Choose a Topic:</label>
+                        <select name="topic" id="input-topic" className="form-control mb-3" onChange={this.handleChange} required >
+                            <option className="bg-white" defaultValue>Personal</option>
+                            <option className="bg-white">Work</option>
+                            <option className="bg-white">Family</option>
+                        </select>
 
-                    <textarea rows="3" type="text" name="text" id="input-text" className="form-control mb-3" placeholder="What do you need to do?" value={this.state.text} onChange={this.handleChange} />
+                        <textarea rows="3" type="text" name="text" id="input-text" className="form-control mb-3" placeholder="What do you need to do?" value={this.state.text} onChange={this.handleChange} required/>
 
-                    <input type="text" name="location" id="input-location" className="form-control mb-3" placeholder="Location" value={this.state.location} onChange={this.handleChange} />
+                        <input type="text" name="location" id="input-location" className="form-control mb-3" placeholder="Location" value={this.state.location} onChange={this.handleChange} />
 
-                    <input type="text" name="time" id="input-time" className="form-control mb-3" placeholder="Time" value={this.state.time} onChange={this.handleChange} />
+                        <input type="text" name="time" id="input-time" className="form-control mb-3" placeholder="Time" value={this.state.time} onChange={this.handleChange} />
 
-                    <div className="form-row">
-                        <button type="button" className="btn btn-primary w-100 mx-auto" onClick={this.handlePost}>Add New Task</button>
-                    </div>
+                        <div className="form-row">
+                            <button type="button" className="btn btn-primary w-100 mx-auto" onClick={this.handlePost}>Add New Task</button>
+                        </div>
 
-                </form>
+                    </form>
 
-            </div>
+                </div>
 
             </Fragment>
         );
