@@ -1,7 +1,14 @@
 article.card {
     transition: border-bottom-width .25s;
+    opacity: 1;
 }
 
 article.card:hover {
     border-bottom-width: 3px;
+}
+
+article.delete {
+    transition: opacity .75s;
+    background: transparent;
+    opacity: 0;
 }
