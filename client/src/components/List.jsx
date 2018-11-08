@@ -7,7 +7,7 @@ import * as Fetch from '../utils/fetch.js';
 import $ from 'jquery';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import Task from './Task';
 
@@ -44,7 +44,7 @@ export default class ListPage extends Component {
                 }
                 this.setState({
                     toDolist: listData,
-                    isLoading: false
+                    // isLoading: false
                 });
             })
             .catch(err => console.log(err));
@@ -69,7 +69,19 @@ export default class ListPage extends Component {
         //initializing tooltips
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
-        })
+        });
+
+        if (this.state.isLoading) {
+            return (
+                <div className="container">
+                    
+                       <div className="mx-auto col-1 pt-5">
+                       <FontAwesomeIcon icon={faSpinner} size="2x" spin />
+                       </div>
+                    
+                </div>
+            );
+        }
 
         return (
             <Fragment>
