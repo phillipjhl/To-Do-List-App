@@ -75,7 +75,7 @@ class TaskInputPage extends Component {
                         <input type="text" name="time" id="input-time" className="form-control mb-3" placeholder="Time" value={this.state.time} onChange={this.handleChange} />
 
                         <div className="form-row">
-                            <button type="button" className="btn btn-primary w-100 mx-auto" onClick={this.handlePost}>Add New Task</button>
+                            <button type="submit" className="btn btn-primary w-100 mx-auto" onClick={this.handlePost}>Add New Task</button>
                         </div>
 
                     </form>
