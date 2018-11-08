@@ -51,7 +51,7 @@ export default class ListPage extends Component {
     createList() {
         //create list of Tasks
         let taskList = this.state.toDolist.map((task) => {
-            return <Task key={task.id} data={task} />
+            return <Task key={task.id} id={task.id} data={task} />
         });
         return taskList;
     }
