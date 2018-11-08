@@ -50,6 +50,12 @@ class Task extends Component {
             setTimeout( () => {
                 $(`#task-${this.props.id}`).remove();
             }, 750);
+            destroy(`/api/list/${this.props.id}`)
+            .then((res)=>{
+                console.log(res);
+            })
+            .catch(e=>console.log(e));
+            // display good job
             
         }
     }
