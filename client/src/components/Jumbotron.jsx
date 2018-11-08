@@ -9,7 +9,7 @@ function Jumbotron(props) {
     let date = getDate();
 
     return (
-        <div className="jumbotron jumbotron-fluid bg-dark text-white">
+        <div className="jumbotron jumbotron-fluid">
             
                 <div className="col-sm-4 pt-2">
                     <h1 className="display-5">{props.titleOne}<br />{props.titleTwo}</h1>                 
