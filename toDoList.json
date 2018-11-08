@@ -1,27 +1,15 @@
 {
-  "2": {
-    "text": "Take daughter to dance",
-    "topic": "Family",
-    "time": "10:30 AM",
-    "location": "Dance Studio"
+  "18": {
+    "topic": "",
+    "text": "",
+    "location": "",
+    "time": ""
   },
-  "3": {
-    "text": "Eat",
-    "topic": "Personal",
-    "time": "7 AM",
-    "location": "Home"
+  "19": {
+    "topic": "",
+    "text": "",
+    "location": "",
+    "time": ""
   },
-  "4": {
-    "text": "Do Stuff",
-    "topic": "Work",
-    "time": "7 AM",
-    "location": "Office"
-  },
-  "5": {
-    "topic": "Work",
-    "text": "More Stuff",
-    "location": "The office",
-    "time": "4PM"
-  },
-  "nextid": 6
+  "nextid": 20
 }

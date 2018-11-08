@@ -116,7 +116,10 @@ class Task extends Component {
                     <div className="container-fluid d-flex justify-content-between">
                         <FontAwesomeIcon icon={this.state.icon} size="2x" className="text-contrast" />
 
-                        <FontAwesomeIcon icon={faCloudUploadAlt} size="2x" className="text-secondary" />
+                        <span data-toggle="tooltip" data-placement="left" title="Update" className="upload" onClick={this.handleSubmit}>
+                            <FontAwesomeIcon icon={faCloudUploadAlt} size="2x" />
+                        </span>
+
                     </div>
 
                     <form className="form-group" onSubmit={this.handleSubmit}>
@@ -125,7 +128,7 @@ class Task extends Component {
                             className="form-control form-control-lg"
                             name="text"
                             value={this.state.text}
-                            placeholder={this.state.text}
+                            placeholder="What do you need to do?"
                             onChange={this.handleChange}
                         >
                         </input>
@@ -134,7 +137,7 @@ class Task extends Component {
                             className="text-muted form-control"
                             name="location"
                             value={this.state.location}
-                            placeholder={this.state.location}
+                            placeholder="Where"
                             onChange={this.handleChange}
                         >
                         </input>
@@ -143,7 +146,7 @@ class Task extends Component {
                             className="text-muted form-control"
                             name="time"
                             value={this.state.time}
-                            placeholder={this.state.time}
+                            placeholder="Time"
                             onChange={this.handleChange}
                         >
                         </input>

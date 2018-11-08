@@ -6,3 +6,13 @@
     color: $success;
     cursor: pointer;
 }
+
+.upload {
+    transition: color .5s;
+    color: $secondary;
+}
+
+.upload:hover {
+    color: $primary;
+    cursor: pointer;
+}
