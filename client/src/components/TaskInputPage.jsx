@@ -1,6 +1,6 @@
 //Component for User Input
 
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import { post } from '../utils/fetch';
 import Jumbotron from './Jumbotron';
