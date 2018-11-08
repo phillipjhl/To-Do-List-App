@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 
+import { put } from '../utils/fetch';
+
 class Task extends Component {
     constructor(props) {
         super(props);
@@ -19,6 +21,7 @@ class Task extends Component {
         }
 
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(e) {
@@ -40,6 +43,12 @@ class Task extends Component {
             location: this.state.location,
             time: this.state.time
         };
+
+        put(`/api/list/${this.props.id}`)
+        .then(()=>{
+            console.log('here');
+        })
+        .catch(e=>console.log(e));
     }
 
     render() {
@@ -49,7 +58,7 @@ class Task extends Component {
 
                 <div className="card-body pb-1">
 
-                    <form className="form-group">
+                    <form className="form-group" onSubmit={this.handleSubmit}>
 
                         <div className="form-row">
 
