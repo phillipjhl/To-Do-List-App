@@ -17,7 +17,7 @@ class Task extends Component {
             location: this.props.data.location,
             time: this.props.data.time,
 
-            icon: null,
+            icon: faTasks,
 
             isCompleted: false
         }
@@ -29,20 +29,16 @@ class Task extends Component {
 
     determineIcon() {
         let topic = this.state.topic;
-        let icon = this.state.icon;
-        if (topic == "work") {
-            let icon = faBriefcase;
-            return icon;
-        } else if (topic == "family") {
-            let icon = faUsers;
-            return icon;
-        } else if (topic == "personal") {
-            let icon = faUser;
-            return icon;
-        } else {
-            let icon = faTasks;
-            return icon;
+        console.log(topic);
+        if (topic === "Work") {
+            this.setState({
+                icon: faBriefcase
+            });
         }
+    }
+
+    componentDidMount() {
+        this.determineIcon();
     }
 
     handleChange(e) {
@@ -78,7 +74,7 @@ class Task extends Component {
 
                 <div className="card-body pb-1">
 
-                    <FontAwesomeIcon icon={this.determineIcon()} size="3x" />
+                    <FontAwesomeIcon icon={this.state.icon} size="3x" />
 
                     <form className="form-group" onSubmit={this.handleSubmit}>
 
