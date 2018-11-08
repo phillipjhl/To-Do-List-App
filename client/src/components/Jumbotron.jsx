@@ -12,7 +12,7 @@ function Jumbotron(props) {
         <div className="jumbotron jumbotron-fluid bg-dark text-white">
             
                 <div className="col-sm-4 pt-2">
-                    <h1 className="display-5">Your<br />Tasks</h1>                 
+                    <h1 className="display-5">{props.titleOne}<br />{props.titleTwo}</h1>                 
                 </div>
 
                 <p className="col-sm-4">
