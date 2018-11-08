@@ -2,7 +2,7 @@
 
 import React, { Component, Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faUsers, faUser, faTasks } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faUsers, faUser, faTasks, faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 import $ from 'jquery';
 
 import { put, destroy } from '../utils/fetch';
@@ -41,22 +41,22 @@ class Task extends Component {
         // Toggling value of isCompleted
         await this.setState(prevState => ({
             isCompleted: !prevState.isCompleted
-          }));
+        }));
 
         if (this.state.isCompleted) {
             // fade with opacity
             $(`#task-${this.props.id}`).addClass('delete');
             // make DELETE request
-            setTimeout( () => {
+            setTimeout(() => {
                 $(`#task-${this.props.id}`).remove();
             }, 750);
             destroy(`/api/list/${this.props.id}`)
-            .then((res)=>{
-                console.log(res);
-            })
-            .catch(e=>console.log(e));
+                .then((res) => {
+                    console.log(res);
+                })
+                .catch(e => console.log(e));
             // display good job
-            
+
         }
     }
 
@@ -84,7 +84,7 @@ class Task extends Component {
         const target = e.target;
         const value = target.value;
         const name = target.name;
-    
+
         this.setState({
             [name]: value
         });
@@ -116,7 +116,7 @@ class Task extends Component {
                     <div className="container-fluid d-flex justify-content-between">
                         <FontAwesomeIcon icon={this.state.icon} size="2x" className="text-contrast" />
 
-                        <OptionsIcon />
+                        <FontAwesomeIcon icon={faCloudUploadAlt} size="2x" className="text-secondary" />
                     </div>
 
                     <form className="form-group" onSubmit={this.handleSubmit}>
