@@ -19,7 +19,7 @@ export default class Checkbox extends Component {
     render() {
         return (
 
-            <span onClick={this.handleClick}>
+            <span onClick={this.handleClick} className="check float-right">
                 <FontAwesomeIcon icon={faCheck} size="2x" />
             </span>
 
