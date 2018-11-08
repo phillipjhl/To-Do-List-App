@@ -48,7 +48,7 @@ let deleteTask = async (id) => {
 
 //write to file- helper function
 let writeList = async () => {
-    await fs.writeFileSync('toDoList.json', JSON.stringify(toDoList));
+    await fs.writeFileSync('toDoList.json', JSON.stringify(toDoList, null, 2));
 }
 
 //export
