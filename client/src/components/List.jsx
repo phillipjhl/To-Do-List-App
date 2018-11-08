@@ -5,10 +5,8 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import * as Fetch from '../utils/fetch.js';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-library.add(faPlus);
 
 import Task from './Task';
 
@@ -70,8 +68,8 @@ export default class ListPage extends Component {
 
                         <h2 className="col-9 text-primary">To Do</h2>
                         
-                        <Link to="/input" className="col-3">
-                            <FontAwesomeIcon icon={faPlus} size="2x" className="add-task" />
+                        <Link to="/input" className="col-2 add-task">
+                            <FontAwesomeIcon icon={faPlus} size="2x" />
                         </Link>
 
                     </div>
