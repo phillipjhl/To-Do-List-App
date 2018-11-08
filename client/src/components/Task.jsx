@@ -29,7 +29,6 @@ class Task extends Component {
 
     determineIcon() {
         let topic = this.state.topic;
-        console.log(topic);
         if (topic === "Work") {
             this.setState({
                 icon: faBriefcase
@@ -49,6 +48,7 @@ class Task extends Component {
     }
 
     componentDidMount() {
+        // Dynamically set the tasks's icon based on the topic
         this.determineIcon();
     }
 
@@ -63,7 +63,7 @@ class Task extends Component {
     }
 
     handleSubmit(e) {
-        // e.preventDefault();
+        e.preventDefault();
 
         let data = {
             topic: this.state.topic,
@@ -81,16 +81,16 @@ class Task extends Component {
 
     render() {
         return (
-            <article className="card border-primary">
+            <article className="card border-primary mb-2">
 
-                <div className="card-body pb-1">
+                <div className="card-body p-2 shadow">
 
                     <FontAwesomeIcon icon={this.state.icon} size="3x" />
 
                     <form className="form-group" onSubmit={this.handleSubmit}>
 
                             <input
-                                className="form-control"
+                                className="form-control form-control-lg"
                                 name="text"
                                 value={this.state.text}
                                 placeholder={this.state.text}
