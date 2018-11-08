@@ -8,7 +8,7 @@ let toDoList = { nextid: 0 };
 //conditional to check id there is already json file
 //set contents to toDoList variable
 if (fs.exists('toDolist.json')) {
-    toDoLst = JSON.parse(fs.readFile('toDoList.json'));
+    toDoList = JSON.parse(fs.readFile('toDoList.json'));
 }
 
 //async get all function
