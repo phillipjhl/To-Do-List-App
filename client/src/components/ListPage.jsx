@@ -15,7 +15,7 @@ export default class ListPage extends Component {
         return (
             <Fragment>
 
-                <Jumbotron />
+                <Jumbotron titleOne="Your" titleTwo="Taks" />
 
                 <List />
 
