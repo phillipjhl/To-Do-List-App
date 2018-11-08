@@ -12,8 +12,8 @@ function NavBar(props) {
 
             <div className="collapse navbar-collapse" id="navbar">
                 <div className="navbar-nav float-right">
-                    <Link to="/list" className="nav-item nav-link display-4 ml-auto">List <span className="sr-only">(current)</span></Link>
-                    <Link to="/input" className="nav-item nav-link display-4 ml-auto">Add Task</Link>
+                    <Link to="/list" className="nav-item nav-link ml-auto">List <span className="sr-only">(current)</span></Link>
+                    <Link to="/input" className="nav-item nav-link ml-auto">Add Task</Link>
                 </div>
             </div>
 
