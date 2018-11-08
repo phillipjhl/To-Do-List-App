@@ -1,7 +1,9 @@
 //Component for User Input
 
 import React, { Component } from 'react';
+
 import { post } from '../utils/fetch';
+import Jumbotron from './Jumbotron';
 
 class TaskInputPage extends Component {
     constructor(props) {
@@ -51,6 +53,10 @@ class TaskInputPage extends Component {
 
     render() {
         return (
+            <Fragment>
+
+            <Jumbotron titleOne="Add" titleTwo="Task" />
+
             <div className="fluid-container d-flex bg-light">
 
                 <form className="form-group col-md-12 h-100 pt-5 mt-5 mx-auto" onSubmit={this.handlePost} >
@@ -75,6 +81,8 @@ class TaskInputPage extends Component {
                 </form>
 
             </div>
+
+            </Fragment>
         );
     }
 }
