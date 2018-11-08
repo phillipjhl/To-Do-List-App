@@ -11,8 +11,9 @@ function NavBar(props) {
             </button>
 
             <div className="collapse navbar-collapse" id="navbar">
-                <div className="navbar-nav flex-row-reverse">
-                    <Link to="/list" className="nav-item nav-link display-4">List <span className="sr-only">(current)</span></Link>
+                <div className="navbar-nav float-right">
+                    <Link to="/list" className="nav-item nav-link display-4 ml-auto">List <span className="sr-only">(current)</span></Link>
+                    <Link to="/input" className="nav-item nav-link display-4 ml-auto">Add Task</Link>
                 </div>
             </div>
 
