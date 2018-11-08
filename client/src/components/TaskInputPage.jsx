@@ -51,7 +51,7 @@ class TaskInputPage extends Component {
 
     render() {
         return (
-            <div className="fluid-container d-flex">
+            <div className="fluid-container d-flex bg-light">
 
                 <form className="form-group col-md-12 h-100 pt-5 mt-5 mx-auto" onSubmit={this.handlePost} >
 
