@@ -1,0 +1,7 @@
+.check {
+    transition: color .5s;
+}
+
+.check:hover {
+    color: $success;
+}
