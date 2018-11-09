@@ -84,7 +84,7 @@ export default class ListPage extends Component {
         } else {
             return (
                 <Fragment>
-                    <aside className="col-md-12 col-lg-8 pt-3 bg-light">
+                    <aside className="col-md-12 col-lg-12 pt-3 bg-light mx-auto">
     
                         <div className="row justify-content-between">
     
