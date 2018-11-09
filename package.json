@@ -13,7 +13,8 @@
     "start": "npm run clean && npm run build:client && npm run build:server && npm run start:server",
     "start:server": "node server/lib/index.js",
     "watch:client": "webpack --mode development --watch",
-    "watch:server": "babel ./server/src -w -d ./server/lib"
+    "watch:server": "babel ./server/src -w -d ./server/lib",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -50,11 +51,14 @@
     "webpack": "^4.24.0"
   },
   "devDependencies": {
+    "babel-jest": "^23.6.0",
     "concurrently": "^4.0.1",
     "css-loader": "^1.0.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "jest": "^23.6.0",
     "node-sass": "^4.9.4",
     "nodemon": "^1.18.5",
+    "react-test-renderer": "^16.6.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack-cli": "^3.1.2"
