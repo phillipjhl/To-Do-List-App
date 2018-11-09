@@ -2,14 +2,14 @@
 // Will call api for data, map over data, create list of Task components
 
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import * as Fetch from '../utils/fetch.js';
 import $ from 'jquery';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import Task from './Task';
+import AddTask from './AddTask';
 
 export default class ListPage extends Component {
     constructor(props) {
@@ -90,11 +90,7 @@ export default class ListPage extends Component {
     
                             <h2 className="col-10 text-primary">To Do</h2>
     
-                            <span className="float-right mx-auto">
-                                <Link to="/input" className="add-task" alt="add task">
-                                    <FontAwesomeIcon icon={faPlus} size="2x" />
-                                </Link>
-                            </span>
+                            <AddTask />
     
                         </div>
     
