@@ -91,7 +91,7 @@ export default class ListPage extends Component {
                             <h2 className="col-10 text-primary">To Do</h2>
     
                             <span className="float-right mx-auto">
-                                <Link to="/input" className="add-task" alt="add task" data-toggle="tooltip" data-placement="top" title="Add Task">
+                                <Link to="/input" className="add-task" alt="add task">
                                     <FontAwesomeIcon icon={faPlus} size="2x" />
                                 </Link>
                             </span>
